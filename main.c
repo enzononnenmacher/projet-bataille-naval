@@ -30,7 +30,7 @@ int main() {
 
     switch (menuPrin)
     {
-        case 1 : do {
+        case 1 : while (compteur != 0) {
                 system("cls");
                 printf("   1 2 3 4 5 6 7 8 9 10\n");
                 for (int i = 0; i < 10; i++) {
@@ -51,7 +51,8 @@ int main() {
                 scanf("%d", &horizontal);
                 if (tabJoueur[vertical - 1][horizontal - 1] == 1) tabJoueur[vertical - 1][horizontal - 1] = 3;
                 else if (tabJoueur[vertical - 1][horizontal - 1] == 0) tabJoueur[vertical - 1][horizontal - 1] = 2;
-            } while (compteur != 0);
+            }
+
                  printf("Vous avez gangé moussaillon !");
                  system("pause");
                  break;
@@ -65,7 +66,7 @@ int main() {
         case 3 : printf("Pas encore dispobible\n");
             do {
                 system("cls");
-                printf("Le but du jeu c'est de dire des cases (par exemple 6 ou I9) a l'ordinateur et qu'il\n"
+                printf("Le but du jeu c'est de dire des cases (par exemple A6 ou I9) a l'ordinateur et qu'il\n"
                        "reponde par louper, toucher ou couler. Le tableaux est un 10X10 (de A a J et de 1 a 10)\n"
                        "Si il dit louper, c'est qu'il n'y a pas d'endroit de bateau a la case que vous avez cite.\n"
                        "Si il dit toucher, c'est que vous avez toucher un endroit du bateau et si il dit couler,\n "
